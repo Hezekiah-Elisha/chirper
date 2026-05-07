@@ -2,7 +2,8 @@
     <x-slot:title>
         Welcome
     </x-slot:title>
-    <div class="max-w-2xl mx-auto">
+    <div class="max-w-2xl mx-auto space-y-5">
+            <h2 class="text-2xl font-bold tracking-wider">Latest Chirps</h2>
             @forelse ($chirps as $chirp)
                 <x-chirp :chirp="$chirp" />
             @empty
