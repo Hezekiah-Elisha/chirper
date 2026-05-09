@@ -20,8 +20,8 @@
                                         placeholder="What's on your mind?"
                                         class="textarea textarea-bordered w-full resize-none @error('message') textarea-error @enderror"
                                         rows="4"
-                                        {{-- maxlength="255" --}}
-                                        {{-- required --}}
+                                        maxlength="255"
+                                        required
                                     >{{ old('message') }}</textarea>
 
                                     @error('message')
