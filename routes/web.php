@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\Logout;
 use App\Http\Controllers\Auth\Register;
 use App\Http\Controllers\ChirpController;
 use Illuminate\Support\Facades\Route;
@@ -17,3 +18,6 @@ Route::delete('/chirps/{chirp}', [ChirpController::class, 'destroy']);
 // Register routes
 Route::view('/register', 'auth.register')->middleware('guest')->name('register');
 Route::post('/register', Register::class, )->middleware('guest');
+
+// Logout route
+Route::post('/logout', Logout::class)->middleware('auth');
